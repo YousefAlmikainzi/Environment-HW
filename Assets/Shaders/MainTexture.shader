@@ -10,7 +10,6 @@ Shader "Unlit/MainTexture"
     SubShader
     {
         Tags { "RenderType"="Opaque" }
-        LOD 100
 
         Pass
         {
@@ -63,4 +62,5 @@ Shader "Unlit/MainTexture"
             ENDCG
         }
     }
+    //Fallback "Diffuse"
 }
