@@ -88,7 +88,7 @@ Shader "Unlit/Water"
                 float4 water = lerp(_Color1, _Color2, waterDepthDFifference);
 
                 float noise = simple_Noise(screenUV * _NoiseScale);
-                float3 existingNormal = tex2Dproj(_CameraDepthTexture, UNITY_PROJ_COORD(i.screenPosition));
+                float3 existingNormal = tex2Dproj(_CameraNormalsTexture, UNITY_PROJ_COORD(i.screenPosition));
                 float3 normalDot = saturate(dot(existingNormal, i.viewNormal));
                 float foamDistance = lerp(_FoamMaxDistance, _FoamMinDistance, normalDot);
                 float foamDepthDiff = saturate(depthDifference/foamDistance);

@@ -29,18 +29,18 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _DepthMaxDistance: 5
-    - _FoamCutOff: 1
+    - _DepthMaxDistance: 4.5
+    - _FoamCutOff: 2.5
     - _FoamCutoff: 2.7
-    - _FoamMaxDistance: 1
+    - _FoamMaxDistance: 8.09
     - _FoamMinDistance: 0.3
     - _FoamNoise: 160.2
     - _Metallic: 0
-    - _NoiseScale: 1
+    - _NoiseScale: 30
     - _Smoothness: 1
     m_Colors:
-    - _Color1: {r: 0, g: 0.87812865, b: 0.9150943, a: 0.56078434}
-    - _Color2: {r: 0, g: 0.087194204, b: 1, a: 0.69411767}
+    - _Color1: {r: 0, g: 0.82026196, b: 1, a: 0.5019608}
+    - _Color2: {r: 0, g: 0.032604694, b: 1, a: 0.6313726}
     - _FoamColor: {r: 1, g: 1, b: 1, a: 1}
     - _Tint: {r: 1, g: 1, b: 1, a: 1}
   m_BuildTextureStacks: []

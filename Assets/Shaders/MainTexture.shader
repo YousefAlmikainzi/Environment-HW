@@ -62,5 +62,5 @@ Shader "Unlit/MainTexture"
             ENDCG
         }
     }
-    //Fallback "Diffuse"
+    Fallback "Diffuse"
 }
