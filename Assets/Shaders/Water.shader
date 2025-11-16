@@ -9,12 +9,14 @@ Shader "Unlit/Water"
         _FoamMinDistance ("Foam Min Distance", Float) = 0.4
         _NoiseScale ("Noise Scale", Float) = 5
         _FoamCutOff ("Foam Cutoff", Float) = 1
+        _TimeScale ("Time Scale", Float) = 1
     }
     SubShader
     {
         Tags { "RenderType"="Transparent" "Queue"="Transparent" }
         Blend SrcAlpha OneMinusSrcAlpha
         ZWrite Off
+        Cull Off
 
         Pass
         {
@@ -45,7 +47,7 @@ Shader "Unlit/Water"
 
             sampler2D _CameraDepthTexture, _CameraNormalsTexture;
             float4 _Color1, _Color2;
-            float _FoamMaxDistance, _FoamMinDistance, _NoiseScale, _FoamCutOff, _DepthMaxDistance;
+            float _FoamMaxDistance, _FoamMinDistance, _NoiseScale, _FoamCutOff, _DepthMaxDistance, _TimeScale;
 
             v2f vert (appdata v)
             {
@@ -87,7 +89,7 @@ Shader "Unlit/Water"
                 float waterDepthDFifference = saturate(depthDifference/_DepthMaxDistance);
                 float4 water = lerp(_Color1, _Color2, waterDepthDFifference);
 
-                float noise = simple_Noise(screenUV * _NoiseScale);
+                float noise = simple_Noise(screenUV * _NoiseScale + (_Time.y * _TimeScale));
                 float3 existingNormal = tex2Dproj(_CameraNormalsTexture, UNITY_PROJ_COORD(i.screenPosition));
                 float3 normalDot = saturate(dot(existingNormal, i.viewNormal));
                 float foamDistance = lerp(_FoamMaxDistance, _FoamMinDistance, normalDot);
