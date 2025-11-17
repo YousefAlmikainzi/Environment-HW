@@ -32,16 +32,19 @@ Material:
     - _Alpha: 1
     - _DepthMaxDistance: 4.5
     - _FoamCutOff: 2.5
-    - _FoamCutoff: 2.7
+    - _FoamCutoff: 1.13
     - _FoamDist: 1
+    - _FoamDistance: 11.97
     - _FoamMaxDistance: 8.09
     - _FoamMinDistance: 0.3
     - _FoamNoise: 160.2
+    - _MaxDepthDifference: 1
     - _MaxDepthDistance: 1
     - _Metallic: 0
     - _NoiseCutoff: 0.8
     - _NoiseScale: 21.35
     - _Smoothness: 1
+    - _TimeScale: 1
     - _TimeSpeed: 1.5
     m_Colors:
     - _Color1: {r: 0, g: 0.82026196, b: 1, a: 0.5019608}

@@ -218,7 +218,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 270053145}
-  m_Mesh: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
+  m_Mesh: {fileID: 0}
 --- !u!4 &270053149
 Transform:
   m_ObjectHideFlags: 0
@@ -228,7 +228,7 @@ Transform:
   m_GameObject: {fileID: 270053145}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 82.24, y: 1.015, z: 88.77}
+  m_LocalPosition: {x: 82.24, y: 1.005, z: 88.77}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -271,10 +271,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 270053145}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d42d1f403ed2fe340806f93e205a396a, type: 3}
+  m_Script: {fileID: 11500000, guid: 1b81cce93c715424c9a278198234b884, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Player
-  speed: 15
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerMovementWithJump
+  speed: 10
+  jumpForce: 10
   cameraMovement: {fileID: 2119825469}
 --- !u!1 &274961616
 GameObject:
