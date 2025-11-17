@@ -16,7 +16,6 @@ Shader "Unlit/Water"
         Tags { "RenderType"="Transparent" "Queue"="Transparent" }
         Blend SrcAlpha OneMinusSrcAlpha
         ZWrite Off
-        Cull Off
 
         Pass
         {
@@ -82,7 +81,7 @@ Shader "Unlit/Water"
             float4 frag (v2f i) : SV_Target
             {
                 float2 screenUV = i.screenPosition.xy / i.screenPosition.w;
-                float ed = tex2D(_CameraDepthTexture, UNITY_PROJ_COORD(screenUV));
+                float ed = tex2D(_CameraDepthTexture, UNITY_PROJ_COORD(i.screenPosition.xy)/i.screenPosition.w);
                 float edl = LinearEyeDepth(ed);
                 float depthDifference = edl - i.screenPosition.w;
 
