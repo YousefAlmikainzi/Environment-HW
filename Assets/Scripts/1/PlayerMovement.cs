@@ -31,8 +31,13 @@ public class PlayerMovement : MonoBehaviour
         cameraRight.Normalize();
 
         Vector3 movementTotal = cameraForward * playerInput.y + cameraRight * playerInput.x;
-        
+        movementTotal.Normalize();
+
+        Vector3 v = rb.linearVelocity;
+        v.x = movementTotal.x * speed;
+        v.z = movementTotal.z * speed;
         //Vector3 force = new Vector3(playerInput.x, 0, playerInput.y);
-        rb.AddForce(movementTotal * speed);
+        //rb.AddForce(movementTotal * speed);
+        rb.linearVelocity = v;
     }
 }

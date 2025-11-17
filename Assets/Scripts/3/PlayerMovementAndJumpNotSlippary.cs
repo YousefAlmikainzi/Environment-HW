@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class PlayerMovementWithJump : MonoBehaviour
+public class PlayerMovementAndJumpNotSlippary : MonoBehaviour
 {
     [SerializeField] float speed = 10.0f;
     [SerializeField] float jumpForce = 10.0f;
@@ -15,12 +15,14 @@ public class PlayerMovementWithJump : MonoBehaviour
     {
         rb = GetComponent<Rigidbody>();
     }
-
+    void Update()
+    {
+        jumpCheck = jumpCheck || Input.GetButtonDown("Jump");
+    }
     void FixedUpdate()
     {
         readInput();
         writeInputs();
-        jumpCheck = jumpCheck || Input.GetButtonDown("Jump");
         if (jumpCheck && grounded)
         {
             OtherJump();
@@ -44,9 +46,14 @@ public class PlayerMovementWithJump : MonoBehaviour
         cameraRight.Normalize();
 
         Vector3 movementTotal = cameraForward * playerInput.y + cameraRight * playerInput.x;
-        
+        movementTotal.Normalize();
+
+        Vector3 v = rb.linearVelocity;
+        v.x = movementTotal.x * speed;
+        v.z = movementTotal.z * speed;
         //Vector3 force = new Vector3(playerInput.x, 0, playerInput.y);
-        rb.AddForce(movementTotal * speed);
+        //rb.AddForce(movementTotal * speed);
+        rb.linearVelocity = v;
     }
     void Jump()
     {

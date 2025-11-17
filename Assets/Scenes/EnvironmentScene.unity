@@ -133,6 +133,7 @@ GameObject:
   - component: {fileID: 270053146}
   - component: {fileID: 270053150}
   - component: {fileID: 270053151}
+  - component: {fileID: 270053152}
   m_Layer: 0
   m_Name: Capsule
   m_TagString: Untagged
@@ -263,6 +264,21 @@ Rigidbody:
   m_Constraints: 112
   m_CollisionDetection: 0
 --- !u!114 &270053151
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 270053145}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba10e12ae5e3ba844b121629c29934d4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerMovementAndJumpNotSlippary
+  speed: 10
+  jumpForce: 10
+  cameraMovement: {fileID: 2119825469}
+--- !u!114 &270053152
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -79504,7 +79520,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 65e62c207501627478dbf661e6ffe2da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Camera
-  sensitivity: 150
+  sensitivity: 100
 --- !u!1001 &8947586855634565456
 PrefabInstance:
   m_ObjectHideFlags: 0
