@@ -1,0 +1,49 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 8
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: GrassMat2
+  m_Shader: {fileID: 4800000, guid: 6a5e0530646956f4fb9e64c55c55c5c3, type: 3}
+  m_Parent: {fileID: 0}
+  m_ModifiedSerializedProperties: 0
+  m_ValidKeywords: []
+  m_InvalidKeywords: []
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_LockedProperties: 
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _MainTex:
+        m_Texture: {fileID: 2800000, guid: 457aee5a609f355459bcfbea6754fcf1, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Ints: []
+    m_Floats:
+    - _Amplitude: 1
+    - _Frequency: 1
+    - _HeightModifier: 1
+    - _Metallic: 0
+    - _MinX: 1
+    - _MinY: 0
+    - _Radius: 10000
+    - _Smoothness: 0.5
+    - _Speed: 1
+    - _UVScale: -0.02
+    - _UVScale2: 3.98
+    - _WindSpeed: 1.69
+    - _WindStrength: 0.09
+    m_Colors:
+    - _Center: {r: 0, g: 0, b: 0, a: 0}
+    - _Color: {r: 0.04809465, g: 0.4716981, b: 0, a: 1}
+  m_BuildTextureStacks: []
+  m_AllowLocking: 1
