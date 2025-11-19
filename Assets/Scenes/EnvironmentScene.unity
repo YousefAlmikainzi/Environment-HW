@@ -548,18 +548,6 @@ PrefabInstance:
       value: Grass
       objectReference: {fileID: 0}
     - target: {fileID: 6652436132512849691, guid: 36014808baf332345be9c7ff45f894a1, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 6652436132512849691, guid: 36014808baf332345be9c7ff45f894a1, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 6652436132512849691, guid: 36014808baf332345be9c7ff45f894a1, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 6652436132512849691, guid: 36014808baf332345be9c7ff45f894a1, type: 3}
       propertyPath: m_LocalPosition.x
       value: 92.4
       objectReference: {fileID: 0}
@@ -598,10 +586,6 @@ PrefabInstance:
     - target: {fileID: 6652436132512849691, guid: 36014808baf332345be9c7ff45f894a1, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6652436132512849691, guid: 36014808baf332345be9c7ff45f894a1, type: 3}
-      propertyPath: m_ConstrainProportionsScale
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
