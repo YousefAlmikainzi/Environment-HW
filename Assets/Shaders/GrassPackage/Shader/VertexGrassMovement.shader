@@ -12,7 +12,7 @@ Shader "Unlit/VertexGrassMovement"
     }
     SubShader
     {
-        Tags{ "RenderType"="opaque"}
+        Tags { "RenderType"="Opaque" }
         Cull Off
 
         Pass
@@ -22,19 +22,20 @@ Shader "Unlit/VertexGrassMovement"
             #pragma fragment frag
             #pragma multi_compile_instancing
 
-            #include "UnityPBSLighting.cginc"
-            #include "AutoLight.cginc"
+            #include "UnityCG.cginc"
 
             struct appdata
             {
                 float4 vertex : POSITION;
-                float2 uv : TEXCOORD0;
+                float2 uv     : TEXCOORD0;
+                UNITY_VERTEX_INPUT_INSTANCE_ID
             };
 
             struct v2f
             {
-                float2 uv : TEXCOORD0;
+                float2 uv     : TEXCOORD0;
                 float4 vertex : SV_POSITION;
+                UNITY_VERTEX_OUTPUT_STEREO
             };
 
             sampler2D _MainTex;
@@ -45,28 +46,41 @@ Shader "Unlit/VertexGrassMovement"
             v2f vert (appdata v)
             {
                 v2f o;
+
+                UNITY_SETUP_INSTANCE_ID(v);
+                UNITY_INITIALIZE_VERTEX_OUTPUT_STEREO(o);
+
                 float3 startingPosition = v.vertex.xyz;
+
                 float height = v.uv.y * _HeightModifier;
                 float grassMovement = sin(_Time.y * _WindSpeed) * _WindStrength * height;
+
                 startingPosition.x += grassMovement;
-                o.vertex = UnityObjectToClipPos(float4(startingPosition, 1.0));
+
+                float4 worldPos = float4(startingPosition, 1.0);
+                o.vertex = UnityObjectToClipPos(worldPos);
                 o.uv = v.uv;
+
                 return o;
             }
             
             float4 frag (v2f i) : SV_Target
             {
                 float3 tex = tex2D(_MainTex, i.uv);
-                float3 fixingUVY = i.uv.y * _UVScale2;
-                float3 fixedColor = _Color * (fixingUVY + _UVScale);
+                float fixingUVY = i.uv.y * _UVScale2;
+
+                float3 fixedColor = _Color.rgb * (fixingUVY + _UVScale);
                 float3 albedo = tex * fixedColor;
+
                 float luminance = dot(tex, float3(0.299, 0.587, 0.114));
                 clip(luminance - 0.01); 
+
                 return float4(albedo, 1);
             }
             ENDCG
         }
     }
+
     Fallback "Diffuse"
     CustomEditor "GUIInterfaceShader"
 }

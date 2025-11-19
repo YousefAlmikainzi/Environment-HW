@@ -602,6 +602,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1928909417}
   - component: {fileID: 1928909416}
+  - component: {fileID: 1928909419}
   m_Layer: 0
   m_Name: SpawnAt
   m_TagString: Untagged
@@ -616,7 +617,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1928909415}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6362f132f6e1372429719d3d458d095a, type: 3}
   m_Name: 
@@ -639,6 +640,22 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1928909419
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1928909415}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7f01cd9a8798af54e9bdb1f2014335fe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::GPUInstancingGrass
+  prefab: {fileID: 860634989}
+  instances: 10000
+  radius: 10
+  YAxis: 77.5
 --- !u!1 &2119825466
 GameObject:
   m_ObjectHideFlags: 0
