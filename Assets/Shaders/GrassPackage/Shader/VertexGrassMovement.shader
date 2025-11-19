@@ -20,6 +20,7 @@ Shader "Unlit/VertexGrassMovement"
             CGPROGRAM
             #pragma vertex vert
             #pragma fragment frag
+            #pragma multi_compile_instancing
 
             #include "UnityPBSLighting.cginc"
             #include "AutoLight.cginc"
@@ -66,4 +67,6 @@ Shader "Unlit/VertexGrassMovement"
             ENDCG
         }
     }
+    Fallback "Diffuse"
+    CustomEditor "GUIInterfaceShader"
 }
