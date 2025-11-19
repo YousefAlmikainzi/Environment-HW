@@ -229,7 +229,7 @@ Transform:
   m_GameObject: {fileID: 270053145}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 82.24, y: 92.77, z: 88.77}
+  m_LocalPosition: {x: 75.1, y: 82.482, z: 60.8}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -275,8 +275,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ba10e12ae5e3ba844b121629c29934d4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerMovementAndJumpNotSlippary
-  speed: 10
-  jumpForce: 10
+  speed: 6
+  jumpForce: 5
   cameraMovement: {fileID: 2119825469}
 --- !u!114 &270053152
 MonoBehaviour:
@@ -634,7 +634,7 @@ Transform:
   m_GameObject: {fileID: 1928909415}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 75.1, y: 80.995, z: 60.8}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -655,7 +655,7 @@ MonoBehaviour:
   prefab: {fileID: 860634989}
   instances: 10000
   radius: 10
-  YAxis: 77.5
+  YAxis: 1
 --- !u!1 &2119825466
 GameObject:
   m_ObjectHideFlags: 0

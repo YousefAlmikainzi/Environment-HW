@@ -12,7 +12,7 @@ public class GPUInstancingGrass : MonoBehaviour
         Random.InitState(10);
         for (int i = 0; i < instances; i++)
         {
-            GameObject instance = Instantiate(prefab);
+            GameObject instance = Instantiate(prefab, transform);
             float randomXPos = Random.Range(-radius, radius);
             float randomZPos = Random.Range(-radius, radius);
 
