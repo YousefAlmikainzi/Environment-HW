@@ -653,7 +653,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GPUInstancingGrass
   prefab: {fileID: 860634989}
-  instances: 10000
+  instances: 1000
   radius: 10
   YAxis: 1
 --- !u!1 &2119825466
