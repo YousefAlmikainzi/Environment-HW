@@ -2,15 +2,10 @@ using UnityEngine;
 
 public class ObjToStopMusic : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
+    [SerializeField] AudioSource mainAudio;
 
-    // Update is called once per frame
-    void Update()
+    private void OnTriggerEnter(Collider other)
     {
-        
+        mainAudio.Stop();
     }
 }
