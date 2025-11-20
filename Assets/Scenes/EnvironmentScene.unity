@@ -444,8 +444,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ba10e12ae5e3ba844b121629c29934d4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerMovementAndJumpNotSlippary
-  speed: 6
-  jumpForce: 5
+  speed: 10
+  jumpForce: 15
+  gravityValue: -0.25
   cameraMovement: {fileID: 2119825469}
 --- !u!114 &270053152
 MonoBehaviour:
@@ -798,6 +799,7 @@ GameObject:
   m_Component:
   - component: {fileID: 876742253}
   - component: {fileID: 876742254}
+  - component: {fileID: 876742255}
   m_Layer: 0
   m_Name: ApplyHeight
   m_TagString: Untagged
@@ -827,7 +829,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 876742252}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fee8186aab693434c90cac5ed04d62fc, type: 3}
   m_Name: 
@@ -835,6 +837,22 @@ MonoBehaviour:
   ourTerrain: {fileID: 274961618}
   heightMapTex: {fileID: 2800000, guid: 00ca9c203cb76064f921abda228d5db4, type: 3}
   heightScale: 0.3
+--- !u!114 &876742255
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 876742252}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2bdf1be521f8480419174841464e1f1e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::BetterApplyHeight
+  ourTerrain: {fileID: 274961618}
+  heightMapTex: {fileID: 2800000, guid: 00ca9c203cb76064f921abda228d5db4, type: 3}
+  heightScale: 0.3
+  smoothness: 50
 --- !u!1 &956364564
 GameObject:
   m_ObjectHideFlags: 0
