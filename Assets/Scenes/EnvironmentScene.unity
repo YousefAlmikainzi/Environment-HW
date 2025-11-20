@@ -229,7 +229,7 @@ Transform:
   m_GameObject: {fileID: 270053145}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 75.1, y: 82.482, z: 60.8}
+  m_LocalPosition: {x: 5, y: 82.482, z: 8}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -603,6 +603,7 @@ GameObject:
   - component: {fileID: 1928909417}
   - component: {fileID: 1928909416}
   - component: {fileID: 1928909419}
+  - component: {fileID: 1928909420}
   m_Layer: 0
   m_Name: SpawnAt
   m_TagString: Untagged
@@ -634,7 +635,7 @@ Transform:
   m_GameObject: {fileID: 1928909415}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 75.1, y: 80.995, z: 60.8}
+  m_LocalPosition: {x: 75.1, y: 82.482, z: 60.8}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -647,7 +648,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1928909415}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7f01cd9a8798af54e9bdb1f2014335fe, type: 3}
   m_Name: 
@@ -656,6 +657,26 @@ MonoBehaviour:
   instances: 1000
   radius: 10
   YAxis: 1
+--- !u!114 &1928909420
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1928909415}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 09c286f37181b754bba5ad45e8b96928, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SingleInstance
+  mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
+  material: {fileID: 2100000, guid: b73ac2ee9b2684740bf137d5b4326a72, type: 2}
+  instances: 10000
+  radius: 10
+  yAxis: 77
+  scale: {x: 0.5, y: 0.5, z: 0.5}
+  minDistance: 0.2
+  maxAttemptsPerInstance: 1000
 --- !u!1 &2119825466
 GameObject:
   m_ObjectHideFlags: 0

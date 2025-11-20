@@ -38,7 +38,7 @@ Material:
     - _Radius: 10000
     - _Smoothness: 0.5
     - _Speed: 1
-    - _UVScale: -0.02
+    - _UVScale: 0.2
     - _UVScale2: 3.98
     - _WindSpeed: 1.69
     - _WindStrength: 0.09
