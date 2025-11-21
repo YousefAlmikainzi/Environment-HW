@@ -14,15 +14,8 @@ public class BetterApplyHeight : MonoBehaviour
     void ApplyHeights()
     {
         var data = ourTerrain.terrainData;
-        int texWidth = heightMapTex.width;
-        int texHeight = heightMapTex.height;
 
-        int resolution = Mathf.Min(texWidth, texHeight);
-
-        if(data.heightmapResolution != resolution)
-        {
-            data.heightmapResolution = resolution;
-        }
+        int resolution = data.heightmapResolution;
 
         float[,] heights = new float [resolution, resolution];
 
